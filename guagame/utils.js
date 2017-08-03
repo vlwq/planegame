@@ -20,9 +20,8 @@ var rectIntersects = function(a, b) {
 
 
 var bulletfrie = function(a, b) {
-    var o = a
-    if (b.y > o.y && b.y < o.y + o.h) {
-        if (b.x > o.x && b.x < o.x + o.w) {
+    if (b.y >= a.y && b.y <= a.y + a.h) {
+        if (b.x >= a.x && b.x <= a.x + a.w) {
             return true
         }
     }
